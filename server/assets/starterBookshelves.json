@@ -1,0 +1,407 @@
+[
+  {
+    "id": "qKydDAAAQBAJ",
+    "userId": "2725",
+    "title": "Add a Pinch",
+    "subtitle": "Easier, Faster, Fresher Southern Classics: A Cookbook",
+    "authors": ["Robyn Stone"],
+    "publisher": "Clarkson Potter/Ten Speed",
+    "publishedDate": "2017-03-28",
+    "description": "With a foreword by Ree Drummond, this beautiful book has 100 easier, faster, lightened-up Southern recipes, from the blogger behind the popular Add a Pinch website. A generation ago, home cooks may have had all day to prepare dinner, but most folks now want convenient, fast recipes that don’t rely on canned soups or other processed products. Here, fresh ingredients take center stage in slow cooker meals, casseroles and one-dish suppers, salads, soups, and desserts that have deep, satisfying flavors but are a cinch to make. Smart swaps like Greek yogurt for mayo in pimento cheese and cauliflower “rice” put a modern spin on these dishes. With 75 color photographs and lots of sidebars, this is the new Southern cooking handbook.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "0553496425"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9780553496420"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": false
+    },
+    "pageCount": 240,
+    "printedPageCount": 242,
+    "printType": "BOOK",
+    "categories": [
+      "Cooking / Regional & Ethnic / American / Southern States",
+      "Cooking / Methods / Quick & Easy",
+      "Cooking / Health & Healing / General"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.3.2.0.preview.2",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/publisher/content?id=qKydDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72CJjBi7ZO24EvsvYPzG-t8c5n7MCK2jFMEbJs8DBWl1U8KH3VdOpMEQQnoltbwz0rgIWAYWrjcRKcTB3-r7mU6RRBDRoSKOnY5WmNRvY_ab3YFRFr4Ln4Pk2BjhC2IQNc33VDJ&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/publisher/content?id=qKydDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70XNPTjzHVSm1fhqs574DpeoXQ1P8cypCUHy5UGqTl12e6XkrfmWwYuWVzD6guPkH0ykWct7zl6DLWfb4rUojmsMwJ8-Th_U9SdQgbIHE7P6a9ptsioXPqipt4hlJIH8QYf4w4D&source=gbs_api",
+      "small": "http://books.google.com/books/publisher/content?id=qKydDAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72oLEQHAFFowfwVQTiGXHXIYxy26_JqFB0Bjmso-sA0NDkD5oXgCg4jxiAO5XaZ-7yZK0SQIMxjA0FUngFS_n5J5i1Ezb7Q1M28hDNm5Vjb7yNHeUvanNa0AbIR0IzDPquN4GGR&source=gbs_api",
+      "medium": "http://books.google.com/books/publisher/content?id=qKydDAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72KUnsAWDDcqmVqtxEw--iyLjenxlOUpZkCwfrJY-GreysZP3YQGJMz2Ejqt88HAQdkfr5y06bzh0z_t6l3ZxJYa60chtVb9EdVaMMTi19fRq16waNFQ4svDzZwZjk0iG4P5N12&source=gbs_api",
+      "large": "http://books.google.com/books/publisher/content?id=qKydDAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73FKBDg_2GM2qXeqSPX-i-GJzPP9XX3VdBFal9_Jdw0TDdbVucQ4Bq_TyiZ4wQpaNjvqblA9sg4_m-EH0wYbP8z2zcZCPxjPUfNqbIN59ZXHD300881Uq9NmYAQu0J_ap1ghOmV&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=qKydDAAAQBAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=qKydDAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=qKydDAAAQBAJ",
+    "shelf": "wantToRead"
+  },
+  {
+    "id": "A1QoDwAAQBAJ",
+    "userId": "2725",
+    "title": "Mastering React Native",
+    "authors": ["Eric Masiello", "Jacob Friedmann"],
+    "publisher": "Packt Publishing Ltd",
+    "publishedDate": "2017-01-11",
+    "description": "Leverage frontend development skills to build impressive iOS and Android applications with React Native About This Book Apply flexbox to get layout and build rich animations that bring your React Native application to life Integrate third-party libraries and develop customized components that run natively on iOS and Android platforms Combine React Native with Redux, Redux middleware, and a remote API to build scalable data-driven applications Who This Book Is For This book is for anyone who wants to build cross-platform native mobile applications using only JavaScript and the React Native framework. In particular, this book is especially useful for front-end developers who want to use their current skillset to build mobile applications. An existing working knowledge of JavaScript will help you get the most out of this book. What You Will Learn Implement native React Native components and APIs Explore React's JSX syntax Manage data using Redux and Redux middleware Build applications with React Native on both iOS and Android platforms Perform animations in your applications using the animation APIs Understand routing and Navigator comparison Create your own Native module In Detail React Native has completely revolutionized mobile development by empowering JavaScript developers to build world-class mobile apps that run natively on mobile platforms. This book will show you how to apply JavaScript and other front-end skills to build cross-platform React Native applications for iOS and Android using a single codebase. This book will provide you with all the React Native building blocks necessary to become an expert. We'll give you a brief explanation of the numerous native components and APIs that come bundled with React Native including Images, Views, ListViews, WebViews, and much more. You will learn to utilize form inputs in React Native. You'll get an overview of Facebook's Flux data architecture and then apply Redux to manage data with a remote API. You will also learn to animate different parts of your application, as well as routing using React Native's navigation APIs. By the end of the book, you will be able to build cutting-edge applications using the React Native framework. Style and approach This comprehensive guide will take your React Native skills to the next level. It shows you how to develop a clear workflow to build scalable applications, and how to implement the architectural concepts covered to build applications that shine in the real world.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1785889796"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781785889790"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": true
+    },
+    "pageCount": 496,
+    "printedPageCount": 490,
+    "printType": "BOOK",
+    "categories": [
+      "Computers / Programming Languages / JavaScript",
+      "Computers / Web / Web Programming",
+      "Computers / Programming / Mobile Devices"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.1.1.0.preview.3",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/publisher/content?id=A1QoDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71ajG2Nl3S-QkLSUbJ0WYicAteIOP1AeRrw1pHhk4ux8jexXfYkahrcL9qNifaCmA83fhjqDnE4C1T2KD2MR9it11irx0pv5nmctuLfHgCXgcm1_q1-Vv5hlDhfHu1cvh4N-YYS&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/publisher/content?id=A1QoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE706G4-e4s_cQvOLPbIN-EzY_gGh0nWpW3sTb5OOUNUuoizMySbdeUOEUEhjhv3cIePcd0OsDPKNKDPHGpyiazmOCvl4zNGJ4hXBYrW2fCN2LI5u_QBDWBkapZTGrFFvWpyZx6vY&source=gbs_api",
+      "small": "http://books.google.com/books/publisher/content?id=A1QoDwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71QgIRDHB5VpGPDE3L81JszsznqiIzchmdItvbfYyEkd9zNfvPVlXRxJ1HPBkB-5PZlBJTh9nm8TSZYRR11pZqUUs5od9pq1jndjo5VXxShjmRRD8xrjhhWWHLpN9Y5pc2j4zhx&source=gbs_api",
+      "medium": "http://books.google.com/books/publisher/content?id=A1QoDwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE720dvBlQCY-miAt0cjdriyK7gmUqBRpnSV1yZTPZY2SL9Jxlphl6ERgg89lDNyl2GJT4UVjQEpYxz93b3yJh9Vze-0K43BivPitj3k0vXvgu0ms99jGYbQN_N7CqUasjUqF-cVe&source=gbs_api",
+      "large": "http://books.google.com/books/publisher/content?id=A1QoDwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70ULxxfW8kfQf-yLge6Gxfxpser-9MiRgi1fNr8T09_8E8CkStV0eSCZvhMdRbvvaxeV5dgiW0YL4FrSz6yKrUWtvcfFeoLMVgJku_rqlVbM-IHKO6TEfmNJ8izzJm1SUy1o-Kq&source=gbs_api",
+      "extraLarge": "http://books.google.com/books/publisher/content?id=A1QoDwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71tYI2HUBSHQiX7QZszH14IjIpRjyIwcQ3cEB2bVcNMq6V1lxiLc3LHKn2DRnvLCcJP_7kjLRT_YHnqJjQGBidyxVmoSLiH2LpRWGuWBDlCYXdZ92Yc0flPgxmi4iLEFTVjlsrN&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=A1QoDwAAQBAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=A1QoDwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=A1QoDwAAQBAJ",
+    "shelf": "wantToRead"
+  },
+  {
+    "id": "aHo3DwAAQBAJ",
+    "userId": "2725",
+    "title": "The User Experience Team of One",
+    "subtitle": "A Research and Design Survival Guide",
+    "authors": ["Leah Buley"],
+    "publisher": "Rosenfeld Media",
+    "publishedDate": "2013-07-09",
+    "description": "The User Experience Team of One prescribes a range of approaches that have big impact and take less time and fewer resources than the standard lineup of UX deliverables. Whether you want to cross over into user experience or you're a seasoned practitioner trying to drag your organization forward, this book gives you tools and insight for doing more with less.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1933820896"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781933820897"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": false
+    },
+    "pageCount": 246,
+    "printedPageCount": 265,
+    "printType": "BOOK",
+    "categories": [
+      "Business & Economics / Marketing / Research",
+      "Computers / User Interfaces",
+      "Business & Economics / Research & Development"
+    ],
+    "averageRating": 4,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.2.2.0.preview.2",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/publisher/content?id=aHo3DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73xF8eZOJfkKCb8KIN4cbwDE5MrBIRn-4OpbdjXhE-feykz6pN489v1rttoV7MaH5L6rBT1_RSC38VnyHFb9h-j0ek_y1Sgzz3TJ8_zV0RYBE94yhjsmg7I9HMnpQPOy_7XDyTN&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/publisher/content?id=aHo3DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71fC8ucn-ZQ5ZA_92o50wdAE9TuXQxZDBQgmU0en9sk6rukmQbMjlQr2EggyY5P7LLoKt7q3-N2Q_TPJRKBboZPTnBCFbhutWCjCKkvpoDAHMvVAOhKcget1B2KXLeK5rNwOd03&source=gbs_api",
+      "small": "http://books.google.com/books/publisher/content?id=aHo3DwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72KHA_yecS3uA3cLbWRU_RPcHOiOU4MRffUYLccotC0Xii8WyQSYxRI8EzFypZOjA5IN7vBpLeZ0v-KZUBRriIJ121eB0Xd5YIzk2Wk-gZQiWu8GVruAvwtcQmtrfGrj9isA2fD&source=gbs_api",
+      "medium": "http://books.google.com/books/publisher/content?id=aHo3DwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE70FDrkoD8EyPUaZkhW13m5c_lOmV-V2LwebEblKZoNZBG45QY8-vJ3Rwx4ZDSx6zu8fLVZmgbPvbZn3oKBoTf0gbKJUUOhCdr2mSwQrypdtrdPr6ufSU7yRuZ-FOg3ZXaA4VEr6&source=gbs_api",
+      "large": "http://books.google.com/books/publisher/content?id=aHo3DwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE738hn_C7doNz2HKLNBg-SA3DCM7mplxgqrA4j9JWkwvrYRDZJ8JeLpvtENBZojjU6BvT3Nq-hyxi7BmdeuGkkTllTqECugQAMpdZuMSoTA0BKx1mz2cU8kuitFV_YUF1dJxRXWe&source=gbs_api",
+      "extraLarge": "http://books.google.com/books/publisher/content?id=aHo3DwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72iQ35mmrWfVTxKDDXjUHWl1ulD0FLBs6-pM3hWugC7DUIQufo0EuEb5RXw6p_EFIQAbEk1-QFWek5MKoTJ3yLSuRa16J0YlOOAKMmai2VFqAkDy1ATIAAK_JTkHbwI3EgLEfe9&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=aHo3DwAAQBAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=aHo3DwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=aHo3DwAAQBAJ",
+    "shelf": "wantToRead"
+  },
+  {
+    "id": "ppjUtAEACAAJ",
+    "userId": "2725",
+    "title": "Fullstack React",
+    "subtitle": "The Complete Guide to ReactJS and Friends",
+    "authors": ["Anthony Accomazzo", "Nate Murray", "Ari Lerner"],
+    "publisher": "Fullstack.io",
+    "publishedDate": "2017-03",
+    "description": "Stop wasting your time learning React with incomplete and confusing tutorials. There are so many incorrect, confusing, and out-of-date blog articles One tutorial says one thing and another says something completely different. There are too many options There are fifty different boilerplates and a dozen different Flux implementations. Which one is best? What if you could master the entire framework in less time, with solid foundations, without beating your head against the wall? Imagine how quickly you can get all of your work done with the right tools and best practices. Seriously, let's stop wasting time scouring Google, searching through incorrect, out-of-date, blog posts and get everything you need to be productive in one, well-organized place, complete with both simple and complex examples to get your app up and running. You'll learn what you need to know to work professionally and build solid, well-tested, optimized apps with ReactJS. This book is your definitive guide.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "0991344626"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9780991344628"
+      }
+    ],
+    "readingModes": {
+      "text": false,
+      "image": false
+    },
+    "pageCount": 836,
+    "printedPageCount": 836,
+    "dimensions": {
+      "height": "28.00 cm",
+      "width": "21.60 cm",
+      "thickness": "4.20 cm"
+    },
+    "printType": "BOOK",
+    "categories": [
+      "Computers / Programming / General",
+      "Computers / Languages / JavaScript"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=ppjUtAEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE71N-1kN1ZNF2CjfF91QTk7oFPG3DMGw45jZlcJE7CniUsO4yelaUvM_q3i_bGWfnUrhiEfjQGflGsDbWLgwFejZOWaFZEHCj56xo3cGXbebRkaTm0JEziyZQ9hlBZTxwlXLoFTC&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=ppjUtAEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70YMrUplFGacSwf9hy7Q87HLUcCj1lnuBaiUMaJvwi_kbvpYn1Io0EWmkCoFNmxY878MCvT4IoD6Qulltjf-zfANFBzW9JNoKyUtgd-jheveYB6pzMLqsYtjxwqujtUqZkYIr1V&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=ppjUtAEACAAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=ppjUtAEACAAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ppjUtAEACAAJ",
+    "shelf": "currentlyReading"
+  },
+  {
+    "id": "dgYvDwAAQBAJ",
+    "userId": "2725",
+    "title": "Eloquent JavaScript, 2nd Ed.",
+    "subtitle": "A Modern Introduction to Programming",
+    "authors": ["Marijn Haverbeke"],
+    "publisher": "No Starch Press",
+    "publishedDate": "2014-12-07",
+    "description": "JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications. Eloquent JavaScript, 2nd Edition dives deep into the JavaScript language to show you how to write beautiful, effective code. Author Marijn Haverbeke immerses you in example code from the start, while exercises and full-chapter projects give you hands-on experience with writing your own programs. As you build projects such as an artificial life simulation, a simple programming language, and a paint program, you’ll learn: –The essential elements of programming, including syntax, control, and data –How to organize and clarify your code with object-oriented and functional programming techniques –How to script the browser and make basic web applications –How to use the DOM effectively to interact with browsers –How to harness Node.js to build servers and utilities This edition is thoroughly revised and modernized to reflect the current state of Java­Script and web browsers, with brand-new material, such as a chapter on code performance in Java­Script, and expanded coverage of recursion and closures. All source code is available online in an inter­active sandbox, where you can edit the code, run it, and see its output instantly. Isn’t it time you became fluent in the language of the Web? Includes an exclusive chapter, only available in the No Starch Press edition!",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1593276613"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781593276614"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": false
+    },
+    "pageCount": 472,
+    "printedPageCount": 478,
+    "printType": "BOOK",
+    "categories": [
+      "Computers / Programming Languages / JavaScript",
+      "Computers / Programming Languages / General",
+      "Computers / Programming / General"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.2",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/publisher/content?id=dgYvDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE708hZ_5-y8LriyICIOZMSEgd0F7cI42_exL3qnzWSSDy1k06JfDif1zwNH8M7DTFkM6PQAabJG6Ffu2Av_RRZGyNsi4emnG7JY0IyoB76lGf6Hy9nyEPyBKrLh5G5y0AbI99mpy&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/publisher/content?id=dgYvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71PBI6Nnp8AYY-oIFD1znBgnL5HmJpg-CkGdqqVwYLsfa89bl8CK9jIkasrvoCx96fkkijXXUOHPCzYQz9VN8yOGCTgG632rAUs3fOg99syVFihi8d3Lnv-VtndcZ9d5aO7-mWA&source=gbs_api",
+      "small": "http://books.google.com/books/publisher/content?id=dgYvDwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE735L4Hnd-_kBUVnFySnkA5VPzF0FiCj19k3BEQNPIwGtLP_69DUm9GujLUGmU25dQl_xukvcHXbApcvDNfhInvw9N90CYZbTyL4OrYWXlisBnq8PYkTjnr2TeTHQCq3kjGn2U5U&source=gbs_api",
+      "medium": "http://books.google.com/books/publisher/content?id=dgYvDwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71eSGG6uaE-ikSeVC03Z6qAl7ZHpFkJ2u_YtENcPOdCSgXMbfz3sUCwRnW-GZqU9NlmzNuxmUA-BLudL-29VTJDm8rUMseNUNWajXMfQ09cG29ycojNy--YqRbKs9YeYQ1yXdvn&source=gbs_api",
+      "large": "http://books.google.com/books/publisher/content?id=dgYvDwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70WS7s-n_BdxqIpCP0SlYeTM2TjXl-mHCCUS3RqqAAMtPhE66yBt4EgrtpsoSgHx7-qKIiwwvZG_bv5569koZgJAxbHOWPZ2k5luU47hwoO3GN__Gl7ZGwn8Bp3IdYTqLNoyfLZ&source=gbs_api",
+      "extraLarge": "http://books.google.com/books/publisher/content?id=dgYvDwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73exv0Z8gvGxv0kMs0_Aslw4ZnxmUbbbluUeC7jaQOAPimd_PecHQKvdwaOo0ckoMszVPKsfCeD-wSzuKkdt7QV5JWihIFlHzReBNEnvsJCaE6ImSVa-g1bIAVXQOLFEDqWGTF0&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=dgYvDwAAQBAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=dgYvDwAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=dgYvDwAAQBAJ",
+    "shelf": "read"
+  },
+  {
+    "id": "YhdU8thA6eEC",
+    "userId": "2725",
+    "title": "The Godfather Effect",
+    "subtitle": "Changing Hollywood, America, and Me",
+    "authors": ["Tom Santopietro"],
+    "publisher": "Macmillan",
+    "publishedDate": "2012-01-31",
+    "description": "A brilliant examination of our forty year obsession with the classic film trilogy—and a personal reflection on what it means to be Italian-American Forty years and one billion dollars in gross box office receipts after the initial release of The Godfather, Francis Ford Coppola's masterful trilogy continues to fascinate viewers old and new. The Godfather Effect skillfully analyzes the reasons behind this ongoing global phenomenon. Packed with behind-the-scenes anecdotes from all three Godfather films, Tom Santopietro explores the historical origins of the Mob and why they thrived in America, how Italian-Americans are portrayed in the media, and how a saga of murderous gangsters captivated audiences around the globe. Laced with stories about Brando, Pacino, and Sinatra, and interwoven with a funny and poignant memoir about the author's own experiences growing up with an Italian name in an Anglo world of private schools and country clubs, The Godfather Effect is a book for film lovers, observers of American life, and Italians of all nationalities.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1429952628"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781429952620"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": false
+    },
+    "pageCount": 336,
+    "printedPageCount": 337,
+    "dimensions": {
+      "height": "2.50 cm",
+      "width": "2.50 cm",
+      "thickness": "2.50 cm"
+    },
+    "printType": "BOOK",
+    "categories": [
+      "Performing Arts / Film / Genres / Crime",
+      "Performing Arts / Film / History & Criticism"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.2.3.0.preview.2",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=YhdU8thA6eEC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE707AKMHn-lGCNXp80sJL9flR3-PzOC5kE6phb7nQuPY9Y7uq8z3aGmU0RangPg1kdiQoskt5mElMY_cFBDKAnssmIT-qXAHYMvjPrPi4SLy0rxGfQ3zERCUzDi-pqlyiOdJOggF&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=YhdU8thA6eEC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73nW2_7qHxYwqjSzyACyOs_CyaKV_h0N667WNHBpreACsL7__aDzb9A6fI547yFn1UV-aQ_nizNt4DcHWouKeO8Gr_YJFgXFJfeLdMGnIbb4TnYFrtLbB7qIJX3q8TASR5mQ8yy&source=gbs_api",
+      "small": "http://books.google.com/books/content?id=YhdU8thA6eEC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73RZcdPW-jAVbC3bpe8tIxUsAHcmwfJCnz_jS4tRE2uWqyyHwVyZZyRQN68V_SbI1ZQzDMrpBmG8oZoLjaHSJxY5-WE6Aj8D_xeQndltvQvaKZ_RtsDxK4CymCiDjmibWdsA5Wj&source=gbs_api",
+      "medium": "http://books.google.com/books/content?id=YhdU8thA6eEC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71wFqPMATC0Ys_W_orMHLS9fAoO2DyLFTq8tNYuKRBepNUFCZkri21pDQhAD0T48SDwa_I7PkUo8SNQD5zcQv99FnWJVpjV6RI_iG-TzmN3NoFY8cddVGkMbz30v1nZoB0zSpv1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=YhdU8thA6eEC&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=YhdU8thA6eEC&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=YhdU8thA6eEC",
+    "shelf": "read"
+  },
+  {
+    "id": "F9wIMQAACAAJ",
+    "userId": "2725",
+    "title": "Alice's Adventures in Wonderland Lewis Carroll",
+    "authors": ["Lewis Carroll"],
+    "publisher": "CreateSpace Independent Publishing Platform",
+    "publishedDate": "2016-11-15",
+    "description": "Alice's Adventures in Wonderland (commonly shortened to Alice in Wonderland) is an 1865 novel written by English mathematician Charles Lutwidge Dodgson under the pseudonym Lewis Carroll. It tells of a girl named Alice falling through a rabbit hole into a fantasy world populated by peculiar, anthropomorphic creatures. The tale plays with logic, giving the story lasting popularity with adults as well as with children. It is considered to be one of the best examples of the literary nonsense genre. Its narrative course and structure, characters and imagery have been enormously influential in both popular culture and literature, especially in the fantasy genre.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "1540413977"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9781540413970"
+      }
+    ],
+    "readingModes": {
+      "text": false,
+      "image": false
+    },
+    "pageCount": 38,
+    "printedPageCount": 38,
+    "dimensions": {
+      "height": "22.90 cm",
+      "width": "15.20 cm",
+      "thickness": "0.20 cm"
+    },
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=F9wIMQAACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE722gOfKZ222XcSsiXzpAPER8zK0KakISREs6mEXmnjt4LDp2hKza0g2ouSFXthU6Nd1tt8tVHscOTsw2gtuCQNSaY1VseA3NOBeOb5VHxhPt2FwYRzK-E1diSRwaXUe0fOPn2uc&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=F9wIMQAACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE720m1-NH8XyOwsei6iOmkontjNrL0Qv65j-ckpXkfVEXqsfgsAnawXdaGN6MgIWIaVQG22_RGD76N3vRPKsWgPSSmQzDS_4KK9u9jjwjCggPyQE-5yczPMdnwTW036ZKr1GIBoU&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=F9wIMQAACAAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=F9wIMQAACAAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=F9wIMQAACAAJ",
+    "shelf": "read"
+  },
+  {
+    "id": "oy3psgEACAAJ",
+    "userId": "5976",
+    "title": "Pokemon Essential Handbook",
+    "subtitle": "The Need-To-Know STATS and Facts on Over 700 Pokeman",
+    "authors": ["Scholastic Inc.", "Scholastic Editors"],
+    "publisher": "Perfection Learning Corporation",
+    "publishedDate": "2015-07-28",
+    "description": "For use in schools and libraries only. Gotta read about 'em all! This revised and updated edition of the mega-bestselling Pokemon Essential Handbook includes stats and facts on over 700 Pokemon. It's everything you ever wanted to know about every Pokemon -- all in one place! This revised and updated edition of the 2012 bestseller has stats and facts on over 700 Pokemon. The book includes 64 new pages focusing on the new Kalos characters that just debuted in the Pokemon X & Y videogames, plus inside info on the new Mega Evolved Pokemon. This book is an absolute must-have for Pokemon fans. It's sure to be a bestseller with kids of all ages.",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_10",
+        "identifier": "0606370838"
+      },
+      {
+        "type": "ISBN_13",
+        "identifier": "9780606370837"
+      }
+    ],
+    "readingModes": {
+      "text": false,
+      "image": false
+    },
+    "pageCount": 432,
+    "printedPageCount": 432,
+    "dimensions": {
+      "height": "23.00 cm",
+      "width": "15.50 cm",
+      "thickness": "2.50 cm"
+    },
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=oy3psgEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE71wJOaCkrbecY_WTHnoHD9ammJ5zrilQB8ePL3G7sXR3vVPFH1ucMhxqnEJ_Zws5wAy6Oy38ZhJAbrwC-srr2tYK0ZonWkKgpeRSk8UaXV6fYtgr-gKu15cpag1twqwOHXs6Lri&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=oy3psgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Z7VTv7XV2mNgT2aveLlpbORLycEPjv5h7_Ib4SutqfzPE5IwhPfbc8pz2YUgpA81DfHq-8Nqrb2pij7L_EWiqnV9hP9pkXhvnG-lH5a2XOmKNNt1G6f9RphvSHU_nap2cd9P8&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=oy3psgEACAAJ&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=oy3psgEACAAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=oy3psgEACAAJ",
+    "shelf": "currentlyReading"
+  }
+]

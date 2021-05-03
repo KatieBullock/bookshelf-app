@@ -1,0 +1,27 @@
+{
+  "name": "book-store-server",
+  "author": "albanycancode",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "mocha server/tests/**/*.spec.js",
+    "build": "cd client && yarn install && yarn run build"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.clonedeep": "^4.5.0",
+    "string-strip-html": "^8.2.13"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "rewire": "^5.0.0"
+  }
+}
