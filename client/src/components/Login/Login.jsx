@@ -15,6 +15,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
     setIsLoading(true);
 
     try {
@@ -26,17 +27,17 @@ const Login = () => {
         },
         data: { username: username, password: password },
       });
+      setIsLoading(false);
       login(response.data.token);
       history.push("/bookshelf");
     } catch (error) {
+      setIsLoading(false);
       if (error.response && error.response.status === 401) {
         setErrorMessage("Invalid username or password");
       } else {
         setErrorMessage("An unexpected error occurred");
       }
     }
-
-    setIsLoading(false);
   };
 
   return (
@@ -67,8 +68,7 @@ const Login = () => {
       </form>
       <p>
         <small>
-          The username is <em>username</em> and the password is{" "}
-          <em>password</em>
+          The username is <em>harry</em> and the password is <em>potter</em>
         </small>
       </p>
       {isLoading && <p>Loading ...</p>}
