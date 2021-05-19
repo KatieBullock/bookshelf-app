@@ -76,7 +76,7 @@ const Bookshelf = () => {
                     <div key={`book-${book.id}`}>
                       <img
                         src={
-                          book.imageLinks.thumbnail
+                          book.imageLinks
                             ? book.imageLinks.thumbnail
                             : "https://picsum.photos/200/300"
                         }
@@ -84,9 +84,13 @@ const Bookshelf = () => {
                       />
                       <div>
                         <h2>{book.title}</h2>
-                        {book.authors.map((author, index) => {
-                          return <p key={`${author}-${index}`}>{author}</p>;
-                        })}
+                        {books.authors ? (
+                          book.authors.map((author, index) => {
+                            return <p key={`${author}-${index}`}>{author}</p>;
+                          })
+                        ) : (
+                          <></>
+                        )}
                       </div>
                       <div>
                         <select
@@ -117,7 +121,7 @@ const Bookshelf = () => {
         );
       })}
 
-      {hasError && <div>"We're sorry, but an unexpected error occurred."</div>}
+      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
     </div>
   );
 };
