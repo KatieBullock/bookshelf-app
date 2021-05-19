@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
-// import Shelf from "../Bookshelf/Shelf";
 import axios from "axios";
 
 const Bookshelf = () => {
@@ -40,6 +39,21 @@ const Bookshelf = () => {
     }
   };
 
+  const removeBook = async (bookId) => {
+    try {
+      const response = await axios({
+        method: "DELETE",
+        url: `/api/bookshelf/${bookId}`,
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        },
+      });
+      setBookshelf(response.data.books);
+    } catch (error) {
+      setHasError(true);
+    }
+  };
+
   useEffect(() => {
     getBookshelf();
   }, []);
@@ -50,21 +64,6 @@ const Bookshelf = () => {
         <h1>You are logged in!</h1>
         <button onClick={logout}>Logout</button>
       </div>
-      {/* <div>
-        <h2>
-          <Link to="/bookshelf">all</Link>
-        </h2>
-      </div> */}
-      {/* {Object.entries(bookshelf).map(([shelf, books]) => {
-        const link = `/bookshelf/${shelf}`;
-        return (
-          <div key={`shelf-${shelf}`}>
-            <h2>
-              <Link to={link}>{shelf}</Link>
-            </h2>
-          </div>
-        );
-      })} */}
       {Object.entries(bookshelf).map(([shelf, books]) => {
         return (
           <div key={`shelf-${shelf}`}>
@@ -72,18 +71,23 @@ const Bookshelf = () => {
             <div>
               {books.length > 0 ? (
                 books.map((book) => {
+                  const link = `/book/${book.id}`;
                   return (
                     <div key={`book-${book.id}`}>
-                      <img
-                        src={
-                          book.imageLinks
-                            ? book.imageLinks.thumbnail
-                            : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
-                        }
-                        alt={book.title}
-                      />
+                      <Link to={link}>
+                        <img
+                          src={
+                            book.imageLinks
+                              ? book.imageLinks.thumbnail
+                              : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
+                          }
+                          alt={book.title}
+                        />
+                      </Link>
                       <div>
-                        <h2>{book.title ? book.title : "Untitled"}</h2>
+                        <Link to={link}>
+                          <h2>{book.title ? book.title : "Untitled"}</h2>
+                        </Link>
                         {books.authors ? (
                           book.authors.map((author, index) => {
                             return <p key={`${author}-${index}`}>{author}</p>;
@@ -98,9 +102,12 @@ const Bookshelf = () => {
                           type="text"
                           value={book.shelf}
                           onChange={(e) => {
-                            moveBook(book.id, e.target.value);
+                            e.target.value === "none"
+                              ? removeBook(book.id)
+                              : moveBook(book.id, e.target.value);
                           }}
                         >
+                          <option value="none">None</option>
                           <option value="wantToRead">Want To Read</option>
                           <option value="currentlyReading">
                             Currently Reading
