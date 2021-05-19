@@ -1,10 +1,13 @@
 import { AccessTokenProvider } from "../../context/AccessTokenContext";
+import { BookshelfProvider } from "../../context/BookshelfContext";
 import AppRouter from "../Routing/AppRouter";
 
 function App() {
   return (
     <AccessTokenProvider>
-      <AppRouter />
+      <BookshelfProvider>
+        <AppRouter />
+      </BookshelfProvider>
     </AccessTokenProvider>
   );
 }

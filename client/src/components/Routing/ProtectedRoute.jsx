@@ -11,6 +11,7 @@ const ProtectedRoute = ({ children, ...restOfProps }) => {
 
   useEffect(() => {
     if (isRefreshing) refreshToken().then(() => setIsRefreshing(false));
+    // eslint-disable-next-line
   }, [isRefreshing]);
 
   if (isRefreshing) return <></>;

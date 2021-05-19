@@ -1,10 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
+import { BookshelfContext } from "../../context/BookshelfContext";
 import axios from "axios";
 
 const BookDetails = () => {
   const { getToken, logout } = useContext(AccessTokenContext);
+  const { bookshelf, changeShelf, removeBook } = useContext(BookshelfContext);
 
   const { bookId } = useParams();
 
@@ -29,10 +31,15 @@ const BookDetails = () => {
 
   useEffect(() => {
     viewDetails();
-  }, []);
+    // eslint-disable-next-line
+  }, [bookshelf]);
 
   return (
     <div>
+      <div>
+        <h1>You are logged in!</h1>
+        <button onClick={logout}>Logout</button>
+      </div>
       <h2>{book.title}</h2>
       <img
         src={
@@ -75,20 +82,24 @@ const BookDetails = () => {
           ? `Published Date: ${book.publishedDate}`
           : "Published Date Unavailable"}
       </div>
-      {/* <div>
+      <div>
         <select
           id="dropdown"
           type="text"
           value={book.shelf}
           onChange={(e) => {
-            moveBook(book.id, e.target.value);
+            e.target.value === "none"
+              ? removeBook(book.id)
+              : changeShelf(book.id, e.target.value);
           }}
         >
+          <option value="none">None</option>
           <option value="wantToRead">Want To Read</option>
           <option value="currentlyReading">Currently Reading</option>
           <option value="read">Read</option>
         </select>
-      </div> */}
+      </div>
+      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
     </div>
   );
 };

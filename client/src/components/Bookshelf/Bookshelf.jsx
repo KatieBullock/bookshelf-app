@@ -1,61 +1,16 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
-import axios from "axios";
+import { BookshelfContext } from "../../context/BookshelfContext";
 
 const Bookshelf = () => {
-  const { getToken, logout } = useContext(AccessTokenContext);
-
-  const [bookshelf, setBookshelf] = useState({});
-  const [hasError, setHasError] = useState(false);
-
-  const getBookshelf = async () => {
-    try {
-      const response = await axios({
-        method: "GET",
-        url: "/api/bookshelf",
-        headers: {
-          Authorization: `Bearer ${getToken()}`,
-        },
-      });
-      setBookshelf(response.data.books);
-    } catch (error) {
-      setHasError(true);
-    }
-  };
-
-  const moveBook = async (bookId, shelfKey) => {
-    try {
-      const response = await axios({
-        method: "PUT",
-        url: `/api/bookshelf/${bookId}/${shelfKey}`,
-        headers: {
-          Authorization: `Bearer ${getToken()}`,
-        },
-      });
-      setBookshelf(response.data.books);
-    } catch (error) {
-      setHasError(true);
-    }
-  };
-
-  const removeBook = async (bookId) => {
-    try {
-      const response = await axios({
-        method: "DELETE",
-        url: `/api/bookshelf/${bookId}`,
-        headers: {
-          Authorization: `Bearer ${getToken()}`,
-        },
-      });
-      setBookshelf(response.data.books);
-    } catch (error) {
-      setHasError(true);
-    }
-  };
+  const { logout } = useContext(AccessTokenContext);
+  const { bookshelf, hasError, getBookshelf, changeShelf, removeBook } =
+    useContext(BookshelfContext);
 
   useEffect(() => {
     getBookshelf();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -104,7 +59,7 @@ const Bookshelf = () => {
                           onChange={(e) => {
                             e.target.value === "none"
                               ? removeBook(book.id)
-                              : moveBook(book.id, e.target.value);
+                              : changeShelf(book.id, e.target.value);
                           }}
                         >
                           <option value="none">None</option>
@@ -127,7 +82,6 @@ const Bookshelf = () => {
           </div>
         );
       })}
-
       {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
     </div>
   );
