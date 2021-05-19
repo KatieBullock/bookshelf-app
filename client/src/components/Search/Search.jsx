@@ -1,4 +1,5 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import axios from "axios";
 
@@ -57,19 +58,24 @@ const Search = () => {
       {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
       {results ? (
         results.map((result) => {
+          const link = `/book/${result.id}`;
           return (
             <div key={result.id}>
-              <img
-                src={
-                  result.imageLinks
-                    ? result.imageLinks.thumbnail
-                    : "https://picsum.photos/200/300"
-                }
-                alt={result.title}
-              />
+              <Link to={link}>
+                <img
+                  src={
+                    result.imageLinks
+                      ? result.imageLinks.thumbnail
+                      : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
+                  }
+                  alt={result.title}
+                />
+              </Link>
               <div>
-                <h2>{result.title}</h2>
-                {results.authors ? (
+                <Link to={link}>
+                  <h2>{result.title ? result.title : "Untitled"}</h2>
+                </Link>
+                {result.authors ? (
                   result.authors.map((author, index) => {
                     return <p key={`${author}-${index}`}>{author}</p>;
                   })

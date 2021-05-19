@@ -78,12 +78,12 @@ const Bookshelf = () => {
                         src={
                           book.imageLinks
                             ? book.imageLinks.thumbnail
-                            : "https://picsum.photos/200/300"
+                            : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
                         }
                         alt={book.title}
                       />
                       <div>
-                        <h2>{book.title}</h2>
+                        <h2>{book.title ? book.title : "Untitled"}</h2>
                         {books.authors ? (
                           book.authors.map((author, index) => {
                             return <p key={`${author}-${index}`}>{author}</p>;
