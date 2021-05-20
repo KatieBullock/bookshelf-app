@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import axios from "axios";
 
 const Search = () => {
@@ -95,6 +96,7 @@ const Search = () => {
       ) : (
         <div>{noResults}</div>
       )}
+      <Footer />
     </div>
   );
 };

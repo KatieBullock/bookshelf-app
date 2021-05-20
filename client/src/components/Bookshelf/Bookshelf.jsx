@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import { BookshelfContext } from "../../context/BookshelfContext";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Bookshelf = () => {
   const { logout } = useContext(AccessTokenContext);
@@ -87,6 +88,7 @@ const Bookshelf = () => {
           </div>
         );
       })}
+      <Footer />
     </div>
   );
 };

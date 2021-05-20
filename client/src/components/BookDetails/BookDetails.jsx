@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import { BookshelfContext } from "../../context/BookshelfContext";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import axios from "axios";
 
 const BookDetails = () => {
@@ -103,6 +104,7 @@ const BookDetails = () => {
           <option value="read">Read</option>
         </select>
       </div>
+      <Footer />
     </div>
   );
 };
