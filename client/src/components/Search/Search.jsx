@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
+import Navbar from "../Navbar/Navbar";
 import axios from "axios";
 
 const Search = () => {
@@ -10,10 +11,10 @@ const Search = () => {
   const [results, setResults] = useState("");
   const [noResults, setNoResults] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [hasError, setHasError] = useState("");
+  const [hasSearchError, setHasSearchError] = useState(false);
 
   const search = async () => {
-    setHasError("");
+    setHasSearchError(false);
     setResults("");
     setNoResults("");
     setIsLoading(true);
@@ -32,7 +33,7 @@ const Search = () => {
         : setResults(response.data.books);
     } catch (error) {
       setIsLoading(false);
-      setHasError(true);
+      setHasSearchError(true);
     }
   };
 
@@ -47,6 +48,7 @@ const Search = () => {
 
   return (
     <div>
+      <Navbar />
       <div>
         <h1>You are logged in!</h1>
         <button onClick={logout}>Logout</button>
@@ -54,8 +56,12 @@ const Search = () => {
       <form action="submit" onSubmit={handleSubmit}>
         <input type="text" value={searchInput} onChange={handleChange} />
       </form>
+
       {isLoading && <p>Loading ...</p>}
-      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
+      {hasSearchError && (
+        <div>We're sorry, but an unexpected error occurred.</div>
+      )}
+
       {results ? (
         results.map((result) => {
           const link = `/book/${result.id}`;

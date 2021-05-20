@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import { BookshelfContext } from "../../context/BookshelfContext";
+import Navbar from "../Navbar/Navbar";
 import axios from "axios";
 
 const BookDetails = () => {
@@ -22,7 +23,6 @@ const BookDetails = () => {
           Authorization: `Bearer ${getToken()}`,
         },
       });
-      console.log(response.data.book);
       setBook(response.data.book);
     } catch (error) {
       setHasError(true);
@@ -36,10 +36,14 @@ const BookDetails = () => {
 
   return (
     <div>
+      <Navbar />
       <div>
         <h1>You are logged in!</h1>
         <button onClick={logout}>Logout</button>
       </div>
+
+      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
+
       <h2>{book.title}</h2>
       <img
         src={
@@ -99,7 +103,6 @@ const BookDetails = () => {
           <option value="read">Read</option>
         </select>
       </div>
-      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import { BookshelfContext } from "../../context/BookshelfContext";
+import Navbar from "../Navbar/Navbar";
 
 const Bookshelf = () => {
   const { logout } = useContext(AccessTokenContext);
@@ -15,10 +16,14 @@ const Bookshelf = () => {
 
   return (
     <div>
+      <Navbar />
       <div>
         <h1>You are logged in!</h1>
         <button onClick={logout}>Logout</button>
       </div>
+
+      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
+
       {Object.entries(bookshelf).map(([shelf, books]) => {
         return (
           <div key={`shelf-${shelf}`}>
@@ -82,7 +87,6 @@ const Bookshelf = () => {
           </div>
         );
       })}
-      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
     </div>
   );
 };
