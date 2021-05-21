@@ -1,12 +1,24 @@
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { AccessTokenContext } from "../../context/AccessTokenContext";
+import {
+  Flex,
+  Box,
+  Stack,
+  FormControl,
+  FormLabel,
+  Input,
+  Button,
+  Select,
+  Heading,
+  Text,
+  Alert,
+  AlertIcon,
+} from "@chakra-ui/react";
 import { BookshelfContext } from "../../context/BookshelfContext";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
 const Bookshelf = () => {
-  const { logout } = useContext(AccessTokenContext);
   const { bookshelf, hasError, getBookshelf, changeShelf, removeBook } =
     useContext(BookshelfContext);
 
@@ -16,67 +28,83 @@ const Bookshelf = () => {
   }, []);
 
   return (
-    <div>
+    <Box>
       <Navbar />
-      <div>
-        <h1>You are logged in!</h1>
-        <button onClick={logout}>Logout</button>
-      </div>
+      <Stack spacing={4} mx={"auto"} py={12} px={6}>
+        {hasError && (
+          <Alert status="error" my={4}>
+            <AlertIcon />
+            We're sorry, but an unexpected error occurred.
+          </Alert>
+        )}
+        {Object.entries(bookshelf).map(([shelf, books]) => {
+          let nameOfShelf;
+          if (shelf === "wantToRead") {
+            nameOfShelf = "Want to Read";
+          } else if (shelf === "currentlyReading") {
+            nameOfShelf = "Currently Reading";
+          } else if (shelf === "read") {
+            nameOfShelf = "Read";
+          }
 
-      {hasError && <div>We're sorry, but an unexpected error occurred.</div>}
-
-      {Object.entries(bookshelf).map(([shelf, books]) => {
-        return (
-          <div key={`shelf-${shelf}`}>
-            <h1>{shelf}</h1>
-            <div>
+          return (
+            <Box rounded={"lg"} boxShadow={"lg"} p={8} key={`shelf-${shelf}`}>
+              <Heading fontSize={"3xl"}>{nameOfShelf}</Heading>
               {books.length > 0 ? (
                 books.map((book) => {
                   const link = `/book/${book.id}`;
                   return (
-                    <div key={`book-${book.id}`}>
-                      <Link to={link}>
-                        <img
-                          src={
-                            book.imageLinks
-                              ? book.imageLinks.thumbnail
-                              : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
-                          }
-                          alt={book.title}
-                        />
-                      </Link>
-                      <div>
+                    <Flex key={`book-${book.id}`}>
+                      <Box>
                         <Link to={link}>
-                          <h2>{book.title ? book.title : "Untitled"}</h2>
+                          <img
+                            src={
+                              book.imageLinks
+                                ? book.imageLinks.thumbnail
+                                : "https:via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
+                            }
+                            alt={book.title}
+                          />
                         </Link>
-                        {books.authors ? (
+                      </Box>
+                      <Box>
+                        <Link to={link}>
+                          <Heading fontSize={"2xl"}>
+                            {book.title ? book.title : "Untitled"}
+                          </Heading>
+                        </Link>
+                        {book.authors ? (
                           book.authors.map((author, index) => {
-                            return <p key={`${author}-${index}`}>{author}</p>;
+                            return (
+                              <Text key={`${author}-${index}`}>{author}</Text>
+                            );
                           })
                         ) : (
                           <></>
                         )}
-                      </div>
-                      <div>
-                        <select
-                          id="dropdown"
-                          type="text"
-                          value={book.shelf}
-                          onChange={(e) => {
-                            e.target.value === "none"
-                              ? removeBook(book.id)
-                              : changeShelf(book.id, e.target.value);
-                          }}
-                        >
-                          <option value="none">None</option>
-                          <option value="wantToRead">Want To Read</option>
-                          <option value="currentlyReading">
-                            Currently Reading
-                          </option>
-                          <option value="read">Read</option>
-                        </select>
-                      </div>
-                    </div>
+                        <Box>
+                          <Text fontSize="xs">Change Shelf:</Text>
+                          <Select
+                            w={"xs"}
+                            id="dropdown"
+                            type="text"
+                            value={book.shelf}
+                            onChange={(e) => {
+                              e.target.value === "none"
+                                ? removeBook(book.id)
+                                : changeShelf(book.id, e.target.value);
+                            }}
+                          >
+                            <option value="none">None</option>
+                            <option value="wantToRead">Want To Read</option>
+                            <option value="currentlyReading">
+                              Currently Reading
+                            </option>
+                            <option value="read">Read</option>
+                          </Select>
+                        </Box>
+                      </Box>
+                    </Flex>
                   );
                 })
               ) : (
@@ -84,12 +112,12 @@ const Bookshelf = () => {
                   Whoops! Doesn't look like you've added any books here yet!
                 </div>
               )}
-            </div>
-          </div>
-        );
-      })}
+            </Box>
+          );
+        })}
+      </Stack>
       <Footer />
-    </div>
+    </Box>
   );
 };
 

@@ -3,10 +3,10 @@ import { useHistory } from "react-router-dom";
 import {
   Flex,
   Box,
+  Stack,
   FormControl,
   FormLabel,
   Input,
-  Stack,
   Button,
   Spinner,
   Heading,
@@ -59,7 +59,7 @@ const Login = () => {
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
         <Box rounded={"lg"} boxShadow={"lg"} p={8}>
           <Stack align={"center"}>
-            <Heading fontSize={"4xl"}>Login</Heading>
+            <Heading fontSize={"3xl"}>Login</Heading>
           </Stack>
           {errorMessage && (
             <Alert status="error" my={4}>
