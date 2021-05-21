@@ -1,5 +1,19 @@
 import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
+import {
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  Stack,
+  Button,
+  Spinner,
+  Heading,
+  Text,
+  Alert,
+  AlertIcon,
+} from "@chakra-ui/react";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import axios from "axios";
 
@@ -41,39 +55,52 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form method="POST" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            required={true}
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            required={true}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit" disabled={isLoading}>
-          Login
-        </button>
-      </form>
-      <p>
-        <small>
-          The username is <em>harry</em> and the password is <em>potter</em>
-        </small>
-      </p>
-      {isLoading && <p>Loading ...</p>}
-      {errorMessage && <div>{errorMessage}</div>}
-    </div>
+    <Flex minH={"100vh"} align={"center"} justify={"center"}>
+      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+        <Box rounded={"lg"} boxShadow={"lg"} p={8}>
+          <Stack align={"center"}>
+            <Heading fontSize={"4xl"}>Login</Heading>
+          </Stack>
+          {errorMessage && (
+            <Alert status="error" my={4}>
+              <AlertIcon />
+              {errorMessage}
+            </Alert>
+          )}
+          <form method="POST" onSubmit={handleSubmit}>
+            <Stack spacing={4} my={4}>
+              <FormControl id="username">
+                <FormLabel>Username</FormLabel>
+                <Input
+                  type="text"
+                  required={true}
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </FormControl>
+              <FormControl id="password">
+                <FormLabel>Password</FormLabel>
+                <Input
+                  type="password"
+                  required={true}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </FormControl>
+              <Stack spacing={10}>
+                <Button type="submit">
+                  {isLoading ? <Spinner /> : "Login"}
+                </Button>
+              </Stack>
+            </Stack>
+          </form>
+          <Text fontSize="sm">
+            Try <em>harry</em> and <em>potter</em> or <em>hermione</em> and{" "}
+            <em>granger</em>
+          </Text>
+        </Box>
+      </Stack>
+    </Flex>
   );
 };
 
