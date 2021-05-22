@@ -4,10 +4,7 @@ import {
   Flex,
   Box,
   Stack,
-  FormControl,
-  FormLabel,
-  Input,
-  Button,
+  Image,
   Select,
   Heading,
   Text,
@@ -49,15 +46,23 @@ const Bookshelf = () => {
 
           return (
             <Box rounded={"lg"} boxShadow={"lg"} p={8} key={`shelf-${shelf}`}>
-              <Heading fontSize={"3xl"}>{nameOfShelf}</Heading>
+              <Heading fontSize={"2xl"} p={2}>
+                {nameOfShelf}
+              </Heading>
               {books.length > 0 ? (
                 books.map((book) => {
                   const link = `/book/${book.id}`;
                   return (
-                    <Flex key={`book-${book.id}`}>
-                      <Box>
+                    <Flex
+                      key={`book-${book.id}`}
+                      maxW={"6xl"}
+                      direction={{ base: "column", md: "row" }}
+                      justify={{ base: "center", md: "flex-start" }}
+                      alignItems={{ base: "flex-start", md: "center" }}
+                    >
+                      <Box p={2}>
                         <Link to={link}>
-                          <img
+                          <Image
                             src={
                               book.imageLinks
                                 ? book.imageLinks.thumbnail
@@ -67,9 +72,9 @@ const Bookshelf = () => {
                           />
                         </Link>
                       </Box>
-                      <Box>
+                      <Box p={2}>
                         <Link to={link}>
-                          <Heading fontSize={"2xl"}>
+                          <Heading fontSize={"xl"}>
                             {book.title ? book.title : "Untitled"}
                           </Heading>
                         </Link>
@@ -82,10 +87,10 @@ const Bookshelf = () => {
                         ) : (
                           <></>
                         )}
-                        <Box>
+                        <Box my={2}>
                           <Text fontSize="xs">Change Shelf:</Text>
                           <Select
-                            w={"xs"}
+                            w={"fit-content"}
                             id="dropdown"
                             type="text"
                             value={book.shelf}
@@ -108,9 +113,16 @@ const Bookshelf = () => {
                   );
                 })
               ) : (
-                <div>
-                  Whoops! Doesn't look like you've added any books here yet!
-                </div>
+                <Flex
+                  maxW={"6xl"}
+                  direction={{ base: "column", md: "row" }}
+                  justify={{ base: "center", md: "flex-start" }}
+                >
+                  <Alert status="warning" my={2}>
+                    <AlertIcon />
+                    There's nothing here yet! Let's get reading!
+                  </Alert>
+                </Flex>
               )}
             </Box>
           );

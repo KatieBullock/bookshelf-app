@@ -1,12 +1,28 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import {
+  Flex,
+  Box,
+  Stack,
+  Image,
+  InputGroup,
+  InputLeftElement,
+  Input,
+  Heading,
+  Text,
+  Spinner,
+  Alert,
+  AlertIcon,
+} from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import axios from "axios";
 
 const Search = () => {
-  const { getToken, logout } = useContext(AccessTokenContext);
+  const { getToken } = useContext(AccessTokenContext);
 
   const [searchInput, setSearchInput] = useState("");
   const [results, setResults] = useState("");
@@ -48,56 +64,89 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <Box>
       <Navbar />
-      <div>
-        <h1>You are logged in!</h1>
-        <button onClick={logout}>Logout</button>
-      </div>
-      <form action="submit" onSubmit={handleSubmit}>
-        <input type="text" value={searchInput} onChange={handleChange} />
-      </form>
-
-      {isLoading && <p>Loading ...</p>}
-      {hasSearchError && (
-        <div>We're sorry, but an unexpected error occurred.</div>
-      )}
-
-      {results ? (
-        results.map((result) => {
-          const link = `/book/${result.id}`;
-          return (
-            <div key={result.id}>
-              <Link to={link}>
-                <img
-                  src={
-                    result.imageLinks
-                      ? result.imageLinks.thumbnail
-                      : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
-                  }
-                  alt={result.title}
-                />
-              </Link>
-              <div>
-                <Link to={link}>
-                  <h2>{result.title ? result.title : "Untitled"}</h2>
-                </Link>
-                {result.authors ? (
-                  result.authors.map((author, index) => {
-                    return <p key={`${author}-${index}`}>{author}</p>;
-                  })
-                ) : (
-                  <></>
-                )}
-              </div>
-            </div>
-          );
-        })
-      ) : (
-        <div>{noResults}</div>
-      )}
+      <Stack mx={"auto"} py={12} px={10}>
+        <Box p={2}>
+          <form action="submit" onSubmit={handleSubmit}>
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents="none"
+                children={<FontAwesomeIcon icon={faSearch} />}
+              />
+              <Input
+                type="text"
+                placeholder="Search"
+                value={searchInput}
+                onChange={handleChange}
+              />
+            </InputGroup>
+          </form>
+        </Box>
+        {isLoading && <Spinner size="xl" />}
+        {hasSearchError && (
+          <Alert status="error" my={4}>
+            <AlertIcon />
+            We're sorry, but an unexpected error occurred.
+          </Alert>
+        )}
+        {results ? (
+          results.map((result) => {
+            const link = `/book/${result.id}`;
+            return (
+              <Flex
+                key={result.id}
+                maxW={"6xl"}
+                direction={{ base: "column", md: "row" }}
+                justify={{ base: "center", md: "flex-start" }}
+                alignItems={{ base: "flex-start", md: "center" }}
+              >
+                <Box p={2}>
+                  <Link to={link}>
+                    <Image
+                      src={
+                        result.imageLinks
+                          ? result.imageLinks.thumbnail
+                          : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
+                      }
+                      alt={result.title}
+                    />
+                  </Link>
+                </Box>
+                <Box p={2}>
+                  <Link to={link}>
+                    <Heading fontSize={"xl"}>
+                      {result.title ? result.title : "Untitled"}
+                    </Heading>
+                  </Link>
+                  {result.authors ? (
+                    result.authors.map((author, index) => {
+                      return <Text key={`${author}-${index}`}>{author}</Text>;
+                    })
+                  ) : (
+                    <></>
+                  )}
+                </Box>
+              </Flex>
+            );
+          })
+        ) : noResults ? (
+          <Flex
+            maxW={"6xl"}
+            direction={{ base: "column", md: "row" }}
+            justify={{ base: "center", md: "flex-start" }}
+          >
+            <Alert status="warning">
+              <AlertIcon />
+              {noResults}
+            </Alert>
+          </Flex>
+        ) : (
+          <></>
+        )}
+      </Stack>
       <Footer />
-    </div>
+    </Box>
   );
 };
 
