@@ -6,25 +6,34 @@ const TruncatedText = ({ text, maxLength }) => {
 
   return (
     <Box>
-      <Text>{text.substring(0, truncatedText)}...</Text>
-      {truncatedText === maxLength ? (
-        <Button
-          type="button"
-          onClick={() => {
-            setTruncatedText(text.length);
-          }}
-        >
-          Read More
-        </Button>
+      {text.length <= maxLength ? (
+        <Text>{text}</Text>
       ) : (
-        <Button
-          type="button"
-          onClick={() => {
-            setTruncatedText(maxLength);
-          }}
-        >
-          Read Less
-        </Button>
+        <Box>
+          <Text>
+            {text.substring(0, truncatedText)}
+            {truncatedText === maxLength ? "..." : ""}
+          </Text>
+          {truncatedText === maxLength ? (
+            <Button
+              type="button"
+              onClick={() => {
+                setTruncatedText(text.length);
+              }}
+            >
+              Read More
+            </Button>
+          ) : (
+            <Button
+              type="button"
+              onClick={() => {
+                setTruncatedText(maxLength);
+              }}
+            >
+              Read Less
+            </Button>
+          )}
+        </Box>
       )}
     </Box>
   );

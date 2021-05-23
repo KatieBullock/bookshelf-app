@@ -101,7 +101,7 @@ const BookDetails = () => {
                     ? book.description
                     : "No description available"
                 }
-                maxLength={1000}
+                maxLength={500}
               />
               <Box>
                 {book.publisher

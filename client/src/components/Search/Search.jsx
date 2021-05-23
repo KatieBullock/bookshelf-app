@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   Flex,
   Box,
@@ -22,6 +22,8 @@ import Footer from "../Footer/Footer";
 import axios from "axios";
 
 const Search = () => {
+  const history = useHistory();
+
   const { getToken } = useContext(AccessTokenContext);
 
   const [searchInput, setSearchInput] = useState("");
@@ -61,6 +63,10 @@ const Search = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     search();
+    history.push({
+      pathname: "/search",
+      search: `${searchInput}`,
+    });
   };
 
   return (

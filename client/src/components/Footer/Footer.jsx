@@ -7,7 +7,6 @@ import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
     <Flex
-      maxW={"6xl"}
       p={4}
       direction={{ base: "column", md: "row" }}
       spacing={4}
