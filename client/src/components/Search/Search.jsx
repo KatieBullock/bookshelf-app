@@ -1,5 +1,5 @@
-import { useState, useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
   Flex,
   Box,
@@ -23,14 +23,23 @@ import axios from "axios";
 
 const Search = () => {
   const history = useHistory();
+  const location = useLocation();
 
   const { getToken } = useContext(AccessTokenContext);
 
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState(
+    location.state && location.state.update ? location.state.update : ""
+  );
   const [results, setResults] = useState("");
   const [noResults, setNoResults] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearchError, setHasSearchError] = useState(false);
+
+  useEffect(() => {
+    if (location.state && location.state.update) {
+      search();
+    }
+  }, []);
 
   const search = async () => {
     setHasSearchError(false);
@@ -65,7 +74,9 @@ const Search = () => {
     search();
     history.push({
       pathname: "/search",
-      search: `${searchInput}`,
+      state: {
+        update: searchInput,
+      },
     });
   };
 
