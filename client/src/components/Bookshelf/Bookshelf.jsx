@@ -27,7 +27,14 @@ const Bookshelf = () => {
   return (
     <Box>
       <Navbar />
-      <Stack spacing={4} mx={"auto"} py={12} px={6}>
+      <Stack
+        spacing={4}
+        alignSelf={"center"}
+        w={"90%"}
+        mx={"auto"}
+        py={8}
+        px={6}
+      >
         {hasError && (
           <Alert status="error" my={4}>
             <AlertIcon />
@@ -66,7 +73,7 @@ const Bookshelf = () => {
                             src={
                               book.imageLinks
                                 ? book.imageLinks.thumbnail
-                                : "https:via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
+                                : "https:via.placeholder.com/150x200/2B6CB0/FFFFFF/?text=No+image"
                             }
                             alt={book.title}
                           />
@@ -88,11 +95,14 @@ const Bookshelf = () => {
                           <></>
                         )}
                         <Box my={2}>
-                          <Text fontSize="xs">Change Shelf:</Text>
+                          <Text fontSize="xs" p={1}>
+                            Change Shelf:
+                          </Text>
                           <Select
-                            w={"fit-content"}
-                            id="dropdown"
                             type="text"
+                            w={"fit-content"}
+                            size={"sm"}
+                            focusBorderColor={"blue.100"}
                             value={book.shelf}
                             onChange={(e) => {
                               e.target.value === "none"
@@ -120,7 +130,7 @@ const Bookshelf = () => {
                 >
                   <Alert status="warning" my={2}>
                     <AlertIcon />
-                    There's nothing here yet! Let's get reading!
+                    There's nothing here yet... Let's get reading!
                   </Alert>
                 </Flex>
               )}

@@ -5,7 +5,7 @@ const TruncatedText = ({ text, maxLength }) => {
   const [truncatedText, setTruncatedText] = useState(maxLength);
 
   return (
-    <Box>
+    <Box m={2}>
       {text.length <= maxLength ? (
         <Text>{text}</Text>
       ) : (
@@ -17,6 +17,9 @@ const TruncatedText = ({ text, maxLength }) => {
           {truncatedText === maxLength ? (
             <Button
               type="button"
+              size={"xs"}
+              variant={"ghost"}
+              colorScheme={"blue"}
               onClick={() => {
                 setTruncatedText(text.length);
               }}
@@ -26,6 +29,9 @@ const TruncatedText = ({ text, maxLength }) => {
           ) : (
             <Button
               type="button"
+              size={"xs"}
+              variant={"ghost"}
+              colorScheme={"blue"}
               onClick={() => {
                 setTruncatedText(maxLength);
               }}

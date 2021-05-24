@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <Flex minH={"100vh"} align={"center"} justify={"center"}>
-      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+      <Stack mx={"auto"} maxW={"lg"} py={8} px={6}>
         <Box rounded={"lg"} boxShadow={"lg"} p={8}>
           <Stack align={"center"}>
             <Heading fontSize={"3xl"}>Login</Heading>
@@ -88,7 +88,7 @@ const Login = () => {
                 />
               </FormControl>
               <Stack spacing={10}>
-                <Button type="submit">
+                <Button type="submit" disabled={isLoading} colorScheme={"blue"}>
                   {isLoading ? <Spinner /> : "Login"}
                 </Button>
               </Stack>

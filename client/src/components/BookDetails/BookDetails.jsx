@@ -49,7 +49,7 @@ const BookDetails = () => {
   return (
     <Box>
       <Navbar />
-      <Box mx={"auto"} py={12} px={6}>
+      <Box w={"90%"} mx={"auto"} py={12} px={6}>
         {hasError && (
           <Alert status="error" my={4}>
             <AlertIcon />
@@ -57,28 +57,29 @@ const BookDetails = () => {
           </Alert>
         )}
         <Box rounded={"lg"} boxShadow={"lg"} p={8}>
-          <Heading fontSize={"2xl"} p={2}>
+          <Heading fontSize={"2xl"} m={2} p={2}>
             {book.title}
           </Heading>
           <Flex
-            maxW={"6xl"}
+            alignSelf={"center"}
             direction={{ base: "column", md: "row" }}
             justify={{ base: "center", md: "flex-start" }}
             alignItems={{ base: "flex-start", md: "flex-start" }}
           >
             <Image
+              m={2}
               p={2}
               src={
                 book.imageLinks
                   ? book.imageLinks.thumbnail
-                  : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
+                  : "https://via.placeholder.com/150x200/2B6CB0/FFFFFF/?text=No+image"
               }
               alt={book.title}
             />
             <Box p={2}>
               {book.authors ? (
                 book.authors.length > 1 ? (
-                  <Flex direction={"column"}>
+                  <Flex m={2} direction={"column"}>
                     Authors:
                     <Flex direction={"column"}>
                       {book.authors.map((author, index) => {
@@ -87,14 +88,13 @@ const BookDetails = () => {
                     </Flex>
                   </Flex>
                 ) : (
-                  <Flex direction={"column"}>
+                  <Flex m={2} direction={"column"}>
                     Author: <Text>{book.authors}</Text>
                   </Flex>
                 )
               ) : (
-                <Text>Author Unavailable</Text>
+                <Text m={2}>Author Unavailable</Text>
               )}
-
               <TruncatedText
                 text={
                   book.description
@@ -103,22 +103,25 @@ const BookDetails = () => {
                 }
                 maxLength={500}
               />
-              <Box>
+              <Box m={2}>
                 {book.publisher
                   ? `Publisher: ${book.publisher}`
                   : "Publisher Unavailable"}
               </Box>
-              <Box>
+              <Box m={2}>
                 {book.publishedDate
                   ? `Published Date: ${book.publishedDate}`
                   : "Published Date Unavailable"}
               </Box>
-              <Box>
-                <Text fontSize="xs">Change Shelf:</Text>
+              <Box m={2}>
+                <Text fontSize="xs" p={1}>
+                  Change Shelf:
+                </Text>
                 <Select
-                  w={"fit-content"}
-                  id="dropdown"
                   type="text"
+                  w={"fit-content"}
+                  size={"sm"}
+                  focusBorderColor={"blue.100"}
                   value={book.shelf}
                   onChange={(e) => {
                     e.target.value === "none"

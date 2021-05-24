@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Flex, HStack, IconButton, Button } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,8 +10,6 @@ import {
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 
 const Navbar = () => {
-  const history = useHistory();
-
   const { logout } = useContext(AccessTokenContext);
 
   const searchReloadLink = () => {
@@ -21,13 +19,21 @@ const Navbar = () => {
   };
 
   return (
-    <Flex h={100} px={4} alignItems={"center"} justifyContent={"space-between"}>
+    <Flex
+      h={100}
+      p={4}
+      spacing={4}
+      bg={"blue.100"}
+      alignItems={"center"}
+      justify={"space-between"}
+    >
       <HStack spacing={4} display={{ md: "none" }}>
         <Link to="/search">
           <IconButton
             icon={<FontAwesomeIcon icon={faSearch} />}
             aria-label={"Search"}
             variant="ghost"
+            colorScheme="blackAlpha"
           />
         </Link>
       </HStack>
@@ -37,6 +43,7 @@ const Navbar = () => {
             leftIcon={<FontAwesomeIcon icon={faBookmark} />}
             aria-label={"Bookshelf"}
             variant="ghost"
+            colorScheme="blue"
           >
             Bookshelf
           </Button>
@@ -47,6 +54,7 @@ const Navbar = () => {
               leftIcon={<FontAwesomeIcon icon={faSearch} />}
               aria-label={"Search"}
               variant="ghost"
+              colorScheme="blackAlpha"
               onClick={searchReloadLink}
             >
               Search
@@ -59,6 +67,7 @@ const Navbar = () => {
           icon={<FontAwesomeIcon icon={faSignOutAlt} />}
           aria-label={"Logout"}
           variant="ghost"
+          colorScheme="blackAlpha"
           onClick={logout}
         />
       </HStack>
@@ -67,6 +76,7 @@ const Navbar = () => {
           leftIcon={<FontAwesomeIcon icon={faSignOutAlt} />}
           aria-label={"Logout"}
           variant="ghost"
+          colorScheme="blackAlpha"
           onClick={logout}
         >
           Logout

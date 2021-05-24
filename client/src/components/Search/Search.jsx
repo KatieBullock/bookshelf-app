@@ -39,6 +39,7 @@ const Search = () => {
     if (location.state && location.state.update) {
       search();
     }
+    // eslint-disable-next-line
   }, []);
 
   const search = async () => {
@@ -83,29 +84,39 @@ const Search = () => {
   return (
     <Box>
       <Navbar />
-      <Stack mx={"auto"} py={12} px={10}>
+      <Stack mx={"auto"} py={8} px={10}>
         <Box p={2}>
           <form action="submit" onSubmit={handleSubmit}>
-            <InputGroup>
+            <InputGroup mx={"auto"} my={8} maxW={"90%"}>
               <InputLeftElement
                 pointerEvents="none"
-                children={<FontAwesomeIcon icon={faSearch} />}
+                children={
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    style={{ color: "#2B6CB0" }}
+                  />
+                }
               />
               <Input
                 type="text"
                 placeholder="Search"
+                focusBorderColor={"blue.100"}
                 value={searchInput}
                 onChange={handleChange}
               />
             </InputGroup>
           </form>
         </Box>
-        {isLoading && <Spinner size="xl" />}
+        <Box alignSelf={"center"}>
+          {isLoading && <Spinner my={20} size="xl" color={"blue.600"} />}
+        </Box>
         {hasSearchError && (
-          <Alert status="error" my={4}>
-            <AlertIcon />
-            We're sorry, but an unexpected error occurred.
-          </Alert>
+          <Box>
+            <Alert status="error" mx={"auto"} maxW={"75%"}>
+              <AlertIcon />
+              We're sorry, but an unexpected error occurred.
+            </Alert>
+          </Box>
         )}
         {results ? (
           results.map((result) => {
@@ -113,7 +124,8 @@ const Search = () => {
             return (
               <Flex
                 key={result.id}
-                maxW={"6xl"}
+                w={"90%"}
+                alignSelf={"center"}
                 direction={{ base: "column", md: "row" }}
                 justify={{ base: "center", md: "flex-start" }}
                 alignItems={{ base: "flex-start", md: "center" }}
@@ -124,7 +136,7 @@ const Search = () => {
                       src={
                         result.imageLinks
                           ? result.imageLinks.thumbnail
-                          : "https://via.placeholder.com/150x200/000000/FFFFFF/?text=No+image"
+                          : "https://via.placeholder.com/150x200/2B6CB0/FFFFFF/?text=No+image"
                       }
                       alt={result.title}
                     />

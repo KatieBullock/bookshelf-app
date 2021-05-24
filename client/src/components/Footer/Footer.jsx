@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <Flex
       p={4}
-      direction={{ base: "column", md: "row" }}
       spacing={4}
+      direction={{ base: "column", md: "row" }}
       justify={{ base: "center", md: "space-between" }}
       align={{ base: "center", md: "center" }}
     >
@@ -18,6 +18,7 @@ const Footer = () => {
           leftIcon={<FontAwesomeIcon icon={faBookmark} />}
           aria-label="Bookshelf"
           variant="ghost"
+          colorScheme="blue"
         >
           Bookshelf
         </Button>
@@ -32,6 +33,7 @@ const Footer = () => {
           icon={<FontAwesomeIcon icon={faLinkedin} size="lg" />}
           aria-label="LinkedIn"
           variant="ghost"
+          colorScheme="linkedin"
         />
         <IconButton
           as="a"
@@ -39,6 +41,7 @@ const Footer = () => {
           icon={<FontAwesomeIcon icon={faGithubSquare} size="lg" />}
           aria-label="GitHub"
           variant="ghost"
+          colorScheme="blackAlpha"
         />
       </Stack>
     </Flex>
