@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Flex, HStack, IconButton, Button } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,7 +10,15 @@ import {
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 
 const Navbar = () => {
+  const history = useHistory();
+
   const { logout } = useContext(AccessTokenContext);
+
+  const searchReloadLink = () => {
+    if (window.location.pathname === "/search") {
+      window.location.reload();
+    }
+  };
 
   return (
     <Flex h={100} px={4} alignItems={"center"} justifyContent={"space-between"}>
@@ -39,6 +47,7 @@ const Navbar = () => {
               leftIcon={<FontAwesomeIcon icon={faSearch} />}
               aria-label={"Search"}
               variant="ghost"
+              onClick={searchReloadLink}
             >
               Search
             </Button>
