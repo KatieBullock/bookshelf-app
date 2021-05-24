@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Flex, HStack, IconButton, Button } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,11 +10,15 @@ import {
 import { AccessTokenContext } from "../../context/AccessTokenContext";
 
 const Navbar = () => {
+  const location = useLocation();
+
   const { logout } = useContext(AccessTokenContext);
 
-  const searchReloadLink = () => {
-    if (window.location.pathname === "/search") {
-      window.location.reload();
+  const disableSearchLink = () => {
+    if (location.pathname === "/search") {
+      return true;
+    } else {
+      return false;
     }
   };
 
@@ -34,6 +38,12 @@ const Navbar = () => {
             aria-label={"Search"}
             variant="ghost"
             colorScheme="blackAlpha"
+            disabled={disableSearchLink()}
+            style={
+              disableSearchLink()
+                ? { cursor: "default" }
+                : { cursor: "pointer" }
+            }
           />
         </Link>
       </HStack>
@@ -55,7 +65,12 @@ const Navbar = () => {
               aria-label={"Search"}
               variant="ghost"
               colorScheme="blackAlpha"
-              onClick={searchReloadLink}
+              disabled={disableSearchLink()}
+              style={
+                disableSearchLink()
+                  ? { cursor: "default" }
+                  : { cursor: "pointer" }
+              }
             >
               Search
             </Button>
