@@ -85,7 +85,7 @@ const Search = () => {
     <Box>
       <Navbar />
       <Stack mx={"auto"} py={8} px={10}>
-        <Box p={2}>
+        <Box>
           <form action="submit" onSubmit={handleSubmit}>
             <InputGroup mx={"auto"} my={8} maxW={"90%"}>
               <InputLeftElement
@@ -107,12 +107,14 @@ const Search = () => {
             </InputGroup>
           </form>
         </Box>
-        <Box alignSelf={"center"}>
-          {isLoading && <Spinner my={20} size="xl" color={"blue.600"} />}
-        </Box>
+        {isLoading && (
+          <Box height={"50vh"} alignSelf={"center"}>
+            <Spinner my={20} size="xl" color={"blue.600"} />
+          </Box>
+        )}
         {hasSearchError && (
           <Box>
-            <Alert status="error" mx={"auto"} maxW={"75%"}>
+            <Alert status="error" mx={"auto"} maxW={"90%"}>
               <AlertIcon />
               We're sorry, but an unexpected error occurred.
             </Alert>
@@ -171,7 +173,9 @@ const Search = () => {
             </Alert>
           </Flex>
         ) : (
-          <></>
+          !isLoading && (
+            <Box width={"100%"} height={"50vh"} my={20} size="xl"></Box>
+          )
         )}
       </Stack>
       <Footer />
