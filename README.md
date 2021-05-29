@@ -39,8 +39,9 @@ Bookshelf utilizes the Google Books API to help you search for books and categor
 - [React Router](https://reactrouter.com/)
 - [Chakra UI](https://chakra-ui.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [Axios](https://www.npmjs.com/package/axios)
 - [Node.js](https://nodejs.org/en/)
-- JWT
+- [JWT](https://www.npmjs.com/package/jsonwebtoken)
 
 ## Getting Started
 
