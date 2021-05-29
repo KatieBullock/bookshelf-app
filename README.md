@@ -33,6 +33,12 @@
 
 Bookshelf utilizes the Google Books API to help you search for books and categorize them on your bookshelf. Who doesn't want to have access to their bookshelf wherever they go?
 
+This app was an exercise in
+- authentication using the Context API and protected routes created with React Router. 
+- state management using the useState hook both locally and with the Context API.
+- API calls using axios and the useEffect hook.
+- design using the component library Chakra UI.
+
 ### Built With
 
 - [React](https://reactjs.org/)
