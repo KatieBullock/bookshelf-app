@@ -2,7 +2,7 @@
   <p align="center">
     Let's read! Organize the books you want to read, the ones you currently are reading, and all of those you've already read with Bookshelf.
     <br />
-    <a href="#">View Demo</a>
+    <h2 align="center"><a href="https://kb-bookshelf-app.herokuapp.com/">View Demo</a><h2>
   </p>
 </p>
 <br />
