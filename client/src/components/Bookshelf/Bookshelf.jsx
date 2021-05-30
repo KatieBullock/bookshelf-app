@@ -81,7 +81,7 @@ const Bookshelf = () => {
                       </Box>
                       <Box p={2}>
                         <Link to={link}>
-                          <Heading fontSize={"xl"}>
+                          <Heading fontSize={"xl"} color={"blue.600"}>
                             {book.title ? book.title : "Untitled"}
                           </Heading>
                         </Link>

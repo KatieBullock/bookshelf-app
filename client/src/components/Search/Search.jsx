@@ -146,7 +146,7 @@ const Search = () => {
                 </Box>
                 <Box p={2}>
                   <Link to={link}>
-                    <Heading fontSize={"xl"}>
+                    <Heading fontSize={"xl"} color={"blue.600"}>
                       {result.title ? result.title : "Untitled"}
                     </Heading>
                   </Link>
